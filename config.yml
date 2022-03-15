@@ -1,2 +1,22 @@
 data:
-  filepath: ./dataset.csv
+  filepath: ../dataset.csv
+
+hyperparams:
+  n_neighbors: 5
+
+metrics:
+  - name: mean absolute error
+    params: {}
+
+search:
+  jobs: -1
+  grid:
+    regressor:
+      n_estimators: [50, 100, 200]
+      max_depth: [null, 10, 20, 30, 60]
+
+export:
+  output_dir: ./models
+
+reports:
+  dir: ./reports

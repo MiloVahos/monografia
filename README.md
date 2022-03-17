@@ -18,6 +18,11 @@ positives, the Precision is the main metric and the one that we want to optimize
 The sensitivity is also very important as it will measure the probability that a classification
 is correct.
 
+Also, the F1 score is the metric in the case we want to avoid false negatives and false positives
+
+- Metrics
+
+
 ref:
   * https://www.analyticsvidhya.com/blog/2020/11/a-tour-of-evaluation-metrics-for-machine-learning/
   * https://www.sciencedirect.com/science/article/pii/S2001037014000464

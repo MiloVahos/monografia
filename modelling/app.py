@@ -54,7 +54,7 @@ def _load_config(filepath: str, key: str):
 def _load_yaml(filepath: str) -> t.Dict[str, t.Any]:
   # Load the yaml file into the yaml object
   with open(filepath, "r") as f:
-    content = yaml.safe_load(f) # Por qué no funcionó con el load?
+    content = yaml.safe_load(f)
     return content
 
 def _get_dataset(data_config, splits):

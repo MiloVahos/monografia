@@ -9,7 +9,7 @@ from sklearn.neighbors import LocalOutlierFactor
 
 class DatasetReader(te.Protocol):
   def __call__(self) -> pd.DataFrame:
-    ... # What does this mean?
+    ...
 
 SplitName = te.Literal["train", "test"]
 

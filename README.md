@@ -28,3 +28,9 @@ ref:
   * https://www.sciencedirect.com/science/article/pii/S2001037014000464
   * https://towardsdatascience.com/metrics-to-evaluate-your-machine-learning-algorithm-f10ba6e38234
   * https://www.intechopen.com/chapters/72044
+
+- Justificación de las métrica de evaluación
+
+En este proyecto se utilizarán las métricas de Accuracy, Sensitivity y Specificity debido a que
+proyectos como [Syantra](https://www.syantra.com/for-healthcare-providers#:~:text=Syantra%20DX%20%7C%20Breast%20Cancer%20is%20an%20advanced%2C%20innovative%20precision%20medicine,early%20stages%2C%20before%20it%20spreads) de detección de cancer de mama usan estas mismas
+métricas para evaluar su desempeño, por lo tanto sirven como punto de comparación.

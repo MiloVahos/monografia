@@ -13,6 +13,9 @@ app = FastAPI(title="Breast Cancer classifier API", version="1.0.0")
 class Settings(BaseSettings):
   serialized_model_path: str
   model_lib_dir: str
+  class Config:
+    env_file = '.env'
+    env_file_encoding = 'utf-8'
 
 @lru_cache(None)
 def get_settings():
@@ -20,8 +23,8 @@ def get_settings():
 
 @lru_cache(None)
 def load_estimator():
-  sys.path.append('modelling')
-  estimator = joblib.load('/Users/camilovahos/Desktop/LEARNING/SPEC/Monografia/Monografia/modelling/models/2022-03-23 00:30:00+00:00/model.joblib')
+  sys.path.append(get_settings().model_lib_dir)
+  estimator = joblib.load(get_settings().serialized_model_path)
   return estimator
 
 @app.get("/")
@@ -35,9 +38,7 @@ async def make_prediction(
   estimator=Depends(load_estimator)
 ):
   X = pd.DataFrame([row.dict() for row in inputs])
-  print('here')
   prediction = estimator.predict(X).tolist()
-  print(prediction)
   return prediction
 
 if __name__ == "__main__":

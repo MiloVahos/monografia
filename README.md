@@ -7,6 +7,11 @@ The dataset contains the 569 observations of patients with a tumor. The characte
 
 -------
 
+## Cómo correr los notebooks
+
+- En teoría, los notebooks deberían correr sin necesidad de ninguna dependencia ya que la descarga del archivo de datos está conectada con Google Drive
+- En caso de error al cargar los datos, en este repositorio se encuentra el dataset, se puede descargar y agregarlo al collab manualmente.
+
 Questions
 ------
 
